@@ -3,6 +3,7 @@
 // NOTE: DO NOT RENAME COPY_ME.gitignore but duplicate it as .gitignore
 .gitignore
 *.swp
+node_modules/
 
 
 // Your own entries go here
