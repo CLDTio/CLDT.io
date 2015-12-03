@@ -1,0 +1,9 @@
+// Copy this file as .gitignore in the main folder. By ignoring the real
+// .gitignore, you can add as many entries as needed in your local copy.
+// NOTE: DO NOT RENAME COPY_ME.gitignore but duplicate it as .gitignore
+.gitignore
+*.swp
+
+
+// Your own entries go here
+
