@@ -1,0 +1,19 @@
+{
+  "name": "CLDT_operational_api",
+  "version": "0.0.1",
+  "description": "An operational API for services such as system health checks and device management",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/CLDTio/CLDT.io.git"
+  },
+  "author": "jos",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CLDTio/CLDT.io/issues"
+  },
+  "homepage": "https://github.com/CLDTio/CLDT.io#readme"
+}
