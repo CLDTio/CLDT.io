@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/CLDTio/CLDT.io/issues"
   },
-  "homepage": "https://github.com/CLDTio/CLDT.io#readme"
+  "homepage": "https://github.com/CLDTio/CLDT.io#readme",
+  "dependencies": {
+    "hapi": "^11.1.2",
+    "underscore": "^1.8.3"
+  }
 }
