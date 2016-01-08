@@ -6,11 +6,17 @@ FROM node:5.1.0
 
 MAINTAINER josmas
 
+RUN apt-get update
+RUN apt-get install -y sudo less vim
+
 RUN npm install node-red -g
 
 RUN useradd -ms /bin/bash jos
+RUN adduser jos sudo
+RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 
 USER jos
+WORKDIR /home/jos
 
 ENV HOME /home/jos
 
