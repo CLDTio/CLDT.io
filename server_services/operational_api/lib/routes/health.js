@@ -8,7 +8,7 @@ const health = {
       path: '/health',
       handler: function(request, reply){
         //TODO (jos) check for all the services?
-        reply({'ok': 'overall'});
+        reply({'StatusCode': '200', 'CheckType': 'overall'});
       }
     });
 
@@ -17,7 +17,7 @@ const health = {
       path: '/health/{name}',
       handler: function(request, reply){
         // TODO (jos) check for a particular service
-        reply({'ok': encodeURIComponent(request.params.name)});
+        reply({'StatusCode': '200', 'CheckType': encodeURIComponent(request.params.name)});
       }
     });
     next();
