@@ -5,17 +5,19 @@ const health = {
 
     server.route({
       method: 'GET',
-      path: '/test',
+      path: '/health',
       handler: function(request, reply){
-        reply('test for API');
+        //TODO (jos) check for all the services?
+        reply({'ok': 'overall'});
       }
     });
 
     server.route({
       method: 'GET',
-      path: '/test/{name}',
+      path: '/health/{name}',
       handler: function(request, reply){
-        reply('test for ' + encodeURIComponent(request.params.name) + '!');
+        // TODO (jos) check for a particular service
+        reply({'ok': encodeURIComponent(request.params.name)});
       }
     });
     next();
