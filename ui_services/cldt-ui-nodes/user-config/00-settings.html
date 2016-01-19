@@ -48,11 +48,11 @@
    <p>This node can be <i><fed/i> directly to a <b>mqtt</b> node.</p>
 </script>
 
-<!-- Finally, the node type is registered along with all of its properties   -->
-<!-- The example below shows a small subset of the properties that can be set-->
+<!-- Defines a new category; it will appear at the end unless specifically -->
+<!-- configured as explained here: http://nodered.org/docs/configuration.html -->
 <script type="text/javascript">
     RED.nodes.registerType('cldt-settings',{
-        category: 'input',      // the palette category
+        category: 'CLDTio',      // the palette category
         defaults: {             // defines the editable properties of the node
             name: {value: ""},   //  along with default values.
             steps: {value: "", required: true},
