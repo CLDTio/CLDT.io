@@ -24,7 +24,6 @@ module.exports = function(RED) {
         this.range = n.range;
         this.frequency = n.frequency;
 
-        // copy "this" object in case we need it in context of callbacks of other functions.
         var node = this;
         var msg = {};
         msg.payload = "Setting up cldt-settings node!";
@@ -33,9 +32,8 @@ module.exports = function(RED) {
         // ... this message will get sent at startup so you may not see it in a debug node.
         this.send(msg);
 
-        //tODO (jos) I want this to be an inject kind of module?
         this.on('input', function (msg) {
-            node.warn("I saw a payload but I am ignoring it for now: " + msg.payload);
+            // No Inputs in this node, so msg should be null
             //TODO (jos) make sure that all fields have data
             var cldtConfig = {};
             cldtConfig.steps = node.steps;
@@ -43,6 +41,7 @@ module.exports = function(RED) {
             cldtConfig.frequency = node.frequency;
             msg.payload = cldtConfig;
             node.send(msg);
+            msg = null;
         });
 
         this.on("close", function() {
